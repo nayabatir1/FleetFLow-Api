@@ -1,0 +1,26 @@
+{
+  "name": "fleetflow-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node src/index",
+    "build": "tsc",
+    "serve": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@nayabatir1-github.com:nayabatir1/FleetFLow-Api.git"
+  },
+  "author": "Atir Nayab",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
