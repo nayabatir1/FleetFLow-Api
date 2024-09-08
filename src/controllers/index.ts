@@ -14,6 +14,7 @@ import TruckModels from "../models/Truck.models";
 import PackerMoversModels from "../models/PackerMovers.models";
 import sanitizedConfig from "../config";
 import { GoogleResponse } from "./GoogleResponse.types";
+import ParcelModels from "../models/Parcel.models";
 
 export async function TwoWheelers(
   { body }: Request<{}, {}, ITwoWheelerPayload>,
@@ -150,6 +151,8 @@ export async function Parcel(
   const price = Math.round(
     rate.chargePerKg * body.weight + rate.chargePerKm * distance
   );
+
+  await ParcelModels.create(body);
 
   res.status(status.OK).json({ message: "success", data: { price } });
 }
